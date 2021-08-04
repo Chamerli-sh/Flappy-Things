@@ -5,3 +5,6 @@ var high_score = 0
 
 func add_score(score):
 	score += score
+
+func get_score():
+	return score

@@ -6,8 +6,6 @@ func _process(delta):
 	translate(Vector2.LEFT * delta * MOVE_SPEED) 
 
 func _on_Pipe_body_entered(body):
-	add_score()
-	pass
+	if body.name == "Player":
+		Global.score += 1
 
-func add_score():
-	Global.add_score(1)
