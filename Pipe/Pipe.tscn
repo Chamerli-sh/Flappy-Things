@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Pipe/Pipe.gd" type="Script" id=2]
+[ext_resource path="res://Pipe/Pipe.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 112 )
+extents = Vector2( 32, 208 )
 
 [sub_resource type="RayShape2D" id=2]
 length = 168.0
@@ -13,30 +13,28 @@ length = 168.0
 script = ExtResource( 2 )
 
 [node name="Up" type="Area2D" parent="."]
-position = Vector2( 0, 192 )
+position = Vector2( 0, 270 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Up"]
 position = Vector2( 4.76837e-07, 16 )
-scale = Vector2( 0.5, 3.5 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
 position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 
 [node name="Down" type="Area2D" parent="."]
-position = Vector2( 0, -184 )
+position = Vector2( 0, -270 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Down"]
 position = Vector2( 4.76837e-07, 1.04904e-05 )
-scale = Vector2( 0.5, 3.5 )
-texture = ExtResource( 1 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
 shape = SubResource( 1 )
