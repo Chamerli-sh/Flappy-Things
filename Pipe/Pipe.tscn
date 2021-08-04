@@ -4,7 +4,7 @@
 [ext_resource path="res://Pipe/Pipe.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 208 )
+extents = Vector2( 32, 224 )
 
 [sub_resource type="RayShape2D" id=2]
 length = 168.0
@@ -21,11 +21,11 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Down"]
-position = Vector2( 4.76837e-07, 16 )
+position = Vector2( 0, 34 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
-position = Vector2( 0, 16 )
+position = Vector2( 0, 34 )
 shape = SubResource( 1 )
 
 [node name="Up" type="StaticBody2D" parent="." groups=[
@@ -37,10 +37,11 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Up"]
-position = Vector2( 4.76837e-07, 1.04904e-05 )
+position = Vector2( 0, -18 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+position = Vector2( 0, -18 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
