@@ -22,10 +22,8 @@ autostart = true
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 448, 0 )
 texture = ExtResource( 1 )
 
 [connection signal="timeout" from="PipeSpawner/Timer" to="PipeSpawner" method="_on_Timer_timeout"]

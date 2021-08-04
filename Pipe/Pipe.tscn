@@ -44,6 +44,8 @@ texture = ExtResource( 3 )
 position = Vector2( 0, -18 )
 shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="ScorePoint" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -72 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="." to="." method="_on_Pipe_body_entered"]
