@@ -7,7 +7,7 @@
 extents = Vector2( 16, 112 )
 
 [sub_resource type="RayShape2D" id=2]
-length = 64.0
+length = 168.0
 
 [node name="Pipe" type="Area2D"]
 script = ExtResource( 2 )
@@ -42,5 +42,5 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -72 )
 shape = SubResource( 2 )
