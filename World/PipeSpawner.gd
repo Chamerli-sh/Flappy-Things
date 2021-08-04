@@ -8,5 +8,5 @@ func spawn(y):
 	pipe.global_position.y = y
 
 func _on_Timer_timeout():
-	var y = rand_range(-64, 64)
+	var y = rand_range(-224, 224)
 	spawn(y)
