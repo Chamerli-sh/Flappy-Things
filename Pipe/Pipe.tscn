@@ -4,7 +4,7 @@
 [ext_resource path="res://Pipe/Pipe.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16, 96 )
+extents = Vector2( 16, 112 )
 
 [sub_resource type="RayShape2D" id=2]
 length = 64.0
@@ -13,28 +13,29 @@ length = 64.0
 script = ExtResource( 2 )
 
 [node name="Up" type="Area2D" parent="."]
-position = Vector2( 0, 128 )
+position = Vector2( 0, 192 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Up"]
-position = Vector2( 4.76837e-07, 0 )
-scale = Vector2( 0.5, 3 )
+position = Vector2( 4.76837e-07, 16 )
+scale = Vector2( 0.5, 3.5 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 
 [node name="Down" type="Area2D" parent="."]
-position = Vector2( 0, -128 )
+position = Vector2( 0, -184 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Down"]
-position = Vector2( 4.76837e-07, 0 )
-scale = Vector2( 0.5, 3 )
+position = Vector2( 4.76837e-07, 1.04904e-05 )
+scale = Vector2( 0.5, 3.5 )
 texture = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
