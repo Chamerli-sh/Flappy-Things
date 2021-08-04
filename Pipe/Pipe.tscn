@@ -12,31 +12,35 @@ length = 168.0
 [node name="Pipe" type="Area2D"]
 script = ExtResource( 2 )
 
-[node name="Up" type="Area2D" parent="."]
+[node name="Down" type="StaticBody2D" parent="." groups=[
+"Pipe",
+]]
 position = Vector2( 0, 270 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Up"]
+[node name="Sprite" type="Sprite" parent="Down"]
 position = Vector2( 4.76837e-07, 16 )
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
 position = Vector2( 0, 16 )
 shape = SubResource( 1 )
 
-[node name="Down" type="Area2D" parent="."]
+[node name="Up" type="StaticBody2D" parent="." groups=[
+"Pipe",
+]]
 position = Vector2( 0, -270 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Down"]
+[node name="Sprite" type="Sprite" parent="Up"]
 position = Vector2( 4.76837e-07, 1.04904e-05 )
 texture = ExtResource( 3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Down"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Up"]
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

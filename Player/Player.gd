@@ -16,4 +16,10 @@ func _physics_process(delta):
 	if motion.y > MAX_FALL_SPEED:
 		motion.y = MAX_FALL_SPEED
 	
-	motion = move_and_slide(motion, UP)
+	motion = move_and_slide(motion, UP) 
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.is_in_group("Pipe"):
+			get_tree().change_scene("res://World/World.tscn")
+			print("Game Over")
+	
