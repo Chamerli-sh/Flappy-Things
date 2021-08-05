@@ -2,6 +2,7 @@ extends Node2D
 
 var score = 0
 var high_score = 0
+var lost = false
 
 func add_score(score):
 	score += score
