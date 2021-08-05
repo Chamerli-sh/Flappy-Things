@@ -22,4 +22,7 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("Pipe"):
 			get_tree().change_scene("res://World/World.tscn")
 			print("Game Over")
+			print("Your current hight score is: " + str(Global.get_hight_score(Global.score)))
 			Global.score = 0
+
+			
