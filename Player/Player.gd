@@ -22,4 +22,3 @@ func _physics_process(delta):
 		if collision.collider.is_in_group("Pipe"):
 			get_tree().change_scene("res://World/World.tscn")
 			print("Game Over")
-	
