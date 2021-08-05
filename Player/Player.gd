@@ -8,7 +8,7 @@ const GRAVITY = 20
 var motion : Vector2
 
 func _physics_process(delta):
-	if Input.is_action_just_released("jump") and not Global.lost:
+	if Input.is_action_just_pressed("jump") and Global.lost == false:
 		motion.y = -JUMP_SPEED
 	
 	motion.y += GRAVITY
@@ -25,6 +25,5 @@ func _physics_process(delta):
 func die():
 	print("Game Over")
 	print("Your current hight score is: " + str(Global.get_hight_score(Global.score)))
-	Global.score = 0
 	Global.lost = true
 	get_tree().get_current_scene().die()

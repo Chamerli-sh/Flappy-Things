@@ -14,3 +14,6 @@ func get_hight_score(score):
 	if score > high_score:
 		high_score = score
 	return high_score
+
+func retry():
+	get_tree().change_scene("res://World/World.tscn")
