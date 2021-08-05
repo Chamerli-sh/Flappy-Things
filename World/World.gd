@@ -17,3 +17,4 @@ func die():
 
 	add_child(explosion)
 	explosion.global_position = player_node.global_position
+	explosion.emitting = true
