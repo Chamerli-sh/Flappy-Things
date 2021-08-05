@@ -16,6 +16,7 @@ colors = PoolColorArray( 1, 0.730347, 0.265625, 1, 0.965199, 0.38499, 0.0117493,
 [node name="ExplosionParticle" type="CPUParticles2D"]
 amount = 200
 lifetime = 0.5
+one_shot = true
 explosiveness = 0.5
 emission_shape = 1
 emission_sphere_radius = 2.0
