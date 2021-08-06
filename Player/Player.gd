@@ -7,6 +7,11 @@ const GRAVITY = 20
 
 var motion : Vector2
 onready var jump_sound = get_node("JumpSoundEffect")
+onready var anim_player = get_node("AnimationPlayer")
+
+func _ready():
+	anim_player.play("Turn")
+
 
 func _physics_process(delta):
 	if Input.is_action_just_released("jump") and Global.lost == false:
@@ -28,4 +33,9 @@ func die():
 	print("Game Over")
 	print("Your current hight score is: " + str(Global.get_hight_score(Global.score)))
 	Global.lost = true
+	anim_player.stop()
 	get_tree().get_current_scene().die()
+
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	anim_player.play(anim_name)
