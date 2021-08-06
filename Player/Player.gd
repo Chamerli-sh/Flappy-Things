@@ -6,10 +6,12 @@ const JUMP_SPEED = 350
 const GRAVITY = 20
 
 var motion : Vector2
+onready var jump_sound = get_node("JumpSoundEffect")
 
 func _physics_process(delta):
 	if Input.is_action_just_released("jump") and Global.lost == false:
 		motion.y = -JUMP_SPEED
+		jump_sound.play()
 	
 	motion.y += GRAVITY
 	if motion.y > MAX_FALL_SPEED:
