@@ -2,8 +2,8 @@ extends Node2D
 
 onready var pipe_node = preload("res://Pipe/Pipe.tscn")
 var y = 0
-const MAX_Y = 132
-const MIN_Y = -132
+const MAX_Y = 220
+const MIN_Y = -220
 
 func spawn(y):
 	var pipe = pipe_node.instance()
@@ -11,7 +11,7 @@ func spawn(y):
 	pipe.global_position.y = y
 
 func _on_Timer_timeout():
-	y = rand_range(-320, 320)
+	y = rand_range(y - 320, y + 320)
 	if y > MAX_Y:
 		y = MAX_Y
 	elif y < MIN_Y:
