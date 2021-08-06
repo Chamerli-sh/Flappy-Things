@@ -8,7 +8,7 @@ const GRAVITY = 20
 var motion : Vector2
 
 func _physics_process(delta):
-	if Input.is_action_just_pressed("jump") and Global.lost == false:
+	if Input.is_action_just_released("jump") and Global.lost == false:
 		motion.y = -JUMP_SPEED
 	
 	motion.y += GRAVITY

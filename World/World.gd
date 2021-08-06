@@ -8,7 +8,6 @@ var explosion
 
 func _ready():
 	explosion = explosion_particle.instance()
-
 	Global.score = 0
 	Global.lost = false
 
