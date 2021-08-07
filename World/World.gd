@@ -25,3 +25,13 @@ func die():
 
 	dead_node.display()
 	
+
+
+func _on_AudioStreamPlayer2D_finished():
+	$AudioStreamPlayer2D.play()
+
+
+func _on_DeadEnd_body_entered(body):
+	if body.name == "Player":
+		Global.lost = true
+		die()

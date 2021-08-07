@@ -11,7 +11,7 @@ func spawn(y):
 	pipe.global_position.y = y
 
 func _on_Timer_timeout():
-	y = rand_range(y - 320, y + 320)
+	y = rand_range(y - 256, y + 256)
 	if y > MAX_Y:
 		y = MAX_Y
 	elif y < MIN_Y:
